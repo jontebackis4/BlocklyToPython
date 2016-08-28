@@ -1,0 +1,1 @@
+Search.setIndex({envversion:50,filenames:["blockly","index"],objects:{},objnames:{},objtypes:{},terms:{content:[],equiv:[],head:[],html:[],http:[],index:[],meta:[],refresh:[],url:[]},titles:["Blockly","Amazing Project"],titleterms:{amaze:1,blockli:0,project:1}})
