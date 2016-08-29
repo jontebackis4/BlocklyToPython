@@ -64,9 +64,16 @@ Nu ska du testa på att göra en egen jämförelse i Blockly. Din uppgift blir a
     :showtitle: Visa tips
     :hidetitle: Göm tips
 
-    *TIPS TEXT GOES HERE!!*
+    *Det går att ha if-satser inuti if-satser.*
 
 Bra jobbat! Nu är vi redo att se hur vi gör jämförelser i Python.
 
 Jämförelser i Python
 ::::::::::::::::::::
+
+*I den här videon förklarar vi hur du skriver en if-sats i Python-kod.*
+
+.. youtube:: D9gG74yMUec
+    :height: 315
+    :width: 560
+    :align: left
