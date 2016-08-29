@@ -27,7 +27,7 @@ from runestone import runestone_static_dirs, runestone_extensions
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.mathjax', 'runestone.blockly'] + runestone_extensions()
+extensions = ['sphinx.ext.mathjax'] + runestone_extensions()
 
 #,'runestone.video','runestone.reveal','runestone.poll','runestone.tabbedStuff','runestone.disqus','runestone.codelens','runestone.activecode', 'runestone.assess', 'runestone.animation','runestone.meta', 'runestone.parsons', 'runestone.blockly', 'runestone.livecode']
 
@@ -44,8 +44,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'Blockly till Python Demo'
-copyright = '2016 Hello World!'
+project = 'Runestone Interactive Overview'
+copyright = '2015 saradanielsson'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -103,7 +103,7 @@ html_theme = 'sphinx_bootstrap'
 #html_theme_options = {'nosidebar': 'true'}
 html_theme_options = {
     # Navigation bar title. (Default: ``project`` value)
-    'navbar_title': "Blockly till Python Demo",
+    'navbar_title': "blockly2pythondemo",
 
     # Tab name for entire site. (Default: "Site")
     'navbar_site_name': "Chapters",
@@ -149,10 +149,10 @@ html_theme_path = ["_templates/plugin_layouts"]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = 'Blockly till Python Demo'
+html_title = 'Runestone Interactive Overview'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-html_short_title ='Blockly till Python Demo'
+html_short_title ='Runestone Interactive Overview'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.

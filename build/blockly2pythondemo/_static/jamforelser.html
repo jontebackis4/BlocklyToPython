@@ -38,7 +38,7 @@
     <button class="btn btn-default" onclick="showCode()">Show Python</button>
     <button class="btn btn-success" onclick="runCode()">Run</button>
 </p>
-<div id="blockly1" style="height: 480px; width: 600px;"></div>
+<div id="jamforelser" style="height: 480px; width: 600px;"></div>
 <xml id="toolbox" style="display: none"><category name="controls"><block type="controls_if"></block>
 <block type="controls_repeat_ext"></block>
 <block type="controls_for"></block>
@@ -49,7 +49,7 @@
 <block type="text_print"></block>
 </category><category name="Variables" custom="VARIABLE"></category></xml>
 <script>
-    Blockly.inject(document.getElementById('blockly1'),
+    Blockly.inject(document.getElementById('jamforelser'),
         {path: './', toolbox: document.getElementById('toolbox')});
 
     function showCode() {
@@ -66,7 +66,7 @@
       var code = Blockly.JavaScript.workspaceToCode();
       Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
       if(logBookEvent) {
-          logBookEvent({'event': 'blockly', 'act': 'run', 'div_id': 'blockly1'});
+          logBookEvent({'event': 'blockly', 'act': 'run', 'div_id': 'jamforelser'});
       } else {
           console.log('logBookEvent is not defined.  This should be defined in the parent frame')
       }
@@ -81,7 +81,7 @@
       // Print statement override. 
       var argument0 = Blockly.JavaScript.valueToCode(block, 'TEXT', 
           Blockly.JavaScript.ORDER_NONE) || '\'\''; 
-      return 'my_custom_print(' + argument0 + ', "blockly1" );\n'; 
+      return 'my_custom_print(' + argument0 + ', "jamforelser" );\n'; 
     }; 
 
     function my_custom_print(text,divid) { 
@@ -95,6 +95,6 @@
 
   </script>
   
-  <pre class="active_out" id="blockly1_pre"></pre>
+  <pre class="active_out" id="jamforelser_pre"></pre>
   </body>
   </html>

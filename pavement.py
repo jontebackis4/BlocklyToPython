@@ -11,19 +11,19 @@ sys.path.append(os.getcwd())
 home_dir = os.getcwd()
 master_url = 'http://127.0.0.1:8000'
 master_app = 'runestone'
-serving_dir = "./build/BlocklyToPython"
+serving_dir = "./build/blockly2pythondemo"
 dest = "../../static"
 
 options(
     sphinx = Bunch(docroot=".",),
 
     build = Bunch(
-        builddir="./build/BlocklyToPython",
+        builddir="./build/blockly2pythondemo",
         sourcedir="_sources",
-        outdir="./build/BlocklyToPython",
+        outdir="./build/blockly2pythondemo",
         confdir=".",
-        project_name = "Blockly till Python Demo",
-        template_args={'course_id': 'Blockly till Python Demo',
+        project_name = "blockly2pythondemo",
+        template_args={'course_id': 'blockly2pythondemo',
                        'login_required':'false',
                        'appname':master_app,
                        'loglevel': 0,
@@ -31,7 +31,7 @@ options(
                        'use_services': 'false',
                        'python3': 'false',
                        'dburl': '',
-                       'basecourse': 'Blockly till Python Demo'
+                       'basecourse': 'blockly2pythondemo'
                         }
     )
 )
