@@ -25,7 +25,7 @@ Nu ska du testa på att göra en egen jämförelse i Blockly. Din uppgift blir a
 
 * Vi säger att alla som är över 18 år får köra bil. Du ska nu göra ett litet program som har en variabel med Pellas ålder och som antingen skriver ut att hon får köra bil, eller inte, beroende på hennes ålder. Testa först med åldern 16 år och sedan 23 år.
 
-.. blockly:: jamforelser
+.. blockly:: blockly1a
 
     * controls
     controls_if
@@ -58,13 +58,18 @@ Nu ska du testa på att göra en egen jämförelse i Blockly. Din uppgift blir a
     </xml>
 
 
-* Egentligen så räcker det ju inte med att vara över 18 för att få köra bil, utan Pella behöver ju ha körkort också. Lägg till en variabel som håller koll på om Pella har körkort eller inte och döp den till “ja” eller “nej” och skriv bara ut att hon får köra bil om hon både är över 18 år **och** har körkort. Tryck på Tips-knappen nedan om du vill ha tips hur du kan göra detta.
+* Egentligen så räcker det ju inte med att vara över 18 för att få köra bil, utan Pella behöver ju ha körkort också. Lägg till en variabel som håller koll på om Pella har körkort eller inte och döp den till “ja” eller “nej”. Skriv sedan bara ut att hon får köra bil om hon både är över 18 år **och** har körkort. Tryck på Tips-knappen nedan om du vill ha tips hur du kan göra detta.
 
 .. reveal:: reveal1
     :showtitle: Visa tips
     :hidetitle: Göm tips
 
-    *Det går att ha if-satser inuti if-satser.*
+    *Det går att ha if-satser inuti if-satser, om man behöver göra flera jämförelser.*
+
+    .. figure:: ../_static/if-if.png
+        :alt: nested if statements
+        :scale: 100%
+
 
 Bra jobbat! Nu är vi redo att se hur vi gör jämförelser i Python.
 
@@ -77,3 +82,15 @@ Jämförelser i Python
     :height: 315
     :width: 560
     :align: left
+
+"Lathund" -- Vad för jämförelser finns det?
+*******************************************
+
+::
+
+   >    "större än"
+   <    "mindre än"
+   ==   "lika med"
+   >=   "större än eller lika med"
+   <=   "mindre än eller lika med"
+   !=   "skilt från"
