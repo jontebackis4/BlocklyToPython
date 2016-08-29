@@ -58,7 +58,13 @@ Nu ska du testa på att göra en egen jämförelse i Blockly. Din uppgift blir a
     </xml>
 
 
-* Egentligen så räcker det ju inte med att vara över 18 för att få köra bil, utan Pella behöver ju ha körkort också. Lägg till en variabel som håller koll på om Pella har körkort eller inte och döp den till “ja” eller “nej” och skriv bara ut att hon får köra bil om hon både är över 18 år **och** har körkort. Se “Tips” om du vill ha hjälp hur man gör detta!
+* Egentligen så räcker det ju inte med att vara över 18 för att få köra bil, utan Pella behöver ju ha körkort också. Lägg till en variabel som håller koll på om Pella har körkort eller inte och döp den till “ja” eller “nej” och skriv bara ut att hon får köra bil om hon både är över 18 år **och** har körkort. Tryck på Tips-knappen nedan om du vill ha tips hur du kan göra detta.
+
+.. reveal:: reveal1
+    :showtitle: Visa tips
+    :hidetitle: Göm tips
+
+    *TIPS TEXT GOES HERE!!*
 
 Bra jobbat! Nu är vi redo att se hur vi gör jämförelser i Python.
 
