@@ -22,8 +22,8 @@ options(
         sourcedir="_sources",
         outdir="./build/BlocklyToPython",
         confdir=".",
-        project_name = "BlocklyToPython",
-        template_args={'course_id': 'BlocklyToPython',
+        project_name = "Blockly till Python Demo",
+        template_args={'course_id': 'Blockly till Python Demo',
                        'login_required':'false',
                        'appname':master_app,
                        'loglevel': 0,
@@ -31,7 +31,7 @@ options(
                        'use_services': 'false',
                        'python3': 'false',
                        'dburl': '',
-                       'basecourse': 'BlocklyToPython'
+                       'basecourse': 'Blockly till Python Demo'
                         }
     )
 )
