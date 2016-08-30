@@ -325,7 +325,7 @@
 <li>Egentligen så räcker det ju inte med att vara över 18 för att få köra bil, utan Pella behöver ju ha körkort också. Lägg till en variabel som håller koll på om Pella har körkort eller inte och döp den till “ja” eller “nej”. Skriv sedan bara ut att hon får köra bil om hon både är över 18 år <strong>och</strong> har körkort, skriv annars ut att hon inte får köra bil. Tryck på Tips-knappen nedan om du vill ha tips hur du kan göra detta.</li>
 </ul>
 
-    <div data-component="reveal" id="reveal1"   data-showtitle="Visa tips" data-hidetitle="Göm tips">
+    <div data-component="reveal" id="tips1a"   data-showtitle="Visa tips" data-hidetitle="Göm tips">
     <ul class="simple">
 <li><em>Det går att ha if-satser inuti if-satser, om man behöver göra flera jämförelser.</em></li>
 </ul>
@@ -333,13 +333,13 @@
 <a class="reference internal image-reference" href="_images/if-if.png"><img alt="nested if statements" src="_images/if-if.png" style="width: 207.0px; height: 130.0px;" /></a>
 </div>
 
-    <div data-component="reveal" id="reveal2"   data-showtitle="Ett till tips" data-hidetitle="Göm tips">
+    <div data-component="reveal" id="tips1b"   data-showtitle="Ett till tips" data-hidetitle="Göm tips">
     <em>Döp en ny variabel till körkort som antingen är textbiten &#8220;Ja&#8221; eller &#8220;Nej&#8221; och gör en jämförelse om körkort är &#8220;Ja&#8221;.</em>
     </div>
     
     </div>
     
-    <div data-component="reveal" id="reveal3"   data-showtitle="Lösning" data-hidetitle="Göm lösning">
+    <div data-component="reveal" id="sol1"   data-showtitle="Lösning" data-hidetitle="Göm lösning">
     <div class="figure">
 <a class="reference internal image-reference" href="_images/uppgift1.png"><img alt="solution1" src="_images/uppgift1.png" style="width: 378.0px; height: 293.0px;" /></a>
 </div>
@@ -359,7 +359,7 @@
 <li>få reda på saldot och</li>
 <li>ta ut pengar,</li>
 </ul>
-<p>men bara <strong>om</strong> användaren skriver in rätt pinkod! Pinkoden bestäms av dig som gör programmet och ska vara fyra siffror, t.ex. “0000”. Du kan hitta på ett saldo till ditt konto. Skriv programmet i rutan nedanför.</p>
+<p>men bara <strong>om</strong> användaren skriver in rätt pinkod! Annars ska ett felmeddelande skrivas ut. Pinkoden bestäms av dig som gör programmet och ska vara fyra siffror, t.ex. “0000”. Du kan hitta på ett saldo till ditt konto. Skriv programmet i rutan nedanför.</p>
 
 <textarea data-component="activecode" id=bankomat data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='Bankomaten (ta bort caption, hur?)'>
 pinkod = "0000"
@@ -368,11 +368,28 @@ saldo = 1337
 #skriv din kod här
 </textarea>
 
-    <div data-component="reveal" id="reveal4"   data-showtitle="Lösning" data-hidetitle="Göm lösning">
-    <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># pinkod = &quot;0000&quot;</span>
-<span class="c1"># saldo = 1337</span>
-<span class="c1"># pythonkod goes here</span>
-<span class="c1">#</span>
+    <div data-component="reveal" id="tips2"   data-showtitle="Visa tips" data-hidetitle="Göm tips">
+    <div id='tips2' data-component="tabbedStuff" ><div data-component="tab" data-tabname="input" >
+Du kan ta <em>input</em> från användaren genom <code class="docutils literal"><span class="pre">input()</span></code></div><div data-component="tab" data-tabname="tal --> text" >
+Pinkoden sparas automatiskt som ett tal. Du behöver göra om pinkoden till en text för att kunna sätta ihop den med text. <code class="docutils literal"><span class="pre">str()</span></code> är en funktion som gör just detta.</div><div data-component="tab" data-tabname="sätta ihop text" >
+Du sätter ihop strängar m.h.a. <code class="docutils literal"><span class="pre">+</span></code>. Ett exempel: <code class="docutils literal"><span class="pre">print</span> <span class="pre">&quot;hello&quot;</span> <span class="pre">+</span> <span class="pre">&quot;world!&quot;</span></code> skriver ut &#8220;hello world!&#8221;</div>
+    </div>
+
+
+    </div>
+    
+    <div data-component="reveal" id="sol2"   data-showtitle="Lösning" data-hidetitle="Göm lösning">
+    <p><em>Det här är bara ett förslag på lösning, din lösning kan se annorlunda ut och vara rätt ändå.</em></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pinkod</span> <span class="o">=</span> <span class="s2">&quot;0000&quot;</span>
+<span class="n">saldo</span> <span class="o">=</span> <span class="mi">1337</span>
+
+<span class="nb">print</span> <span class="s2">&quot;Welcome to the ATM!&quot;</span>
+<span class="n">pinkod_input</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Pin Code: &quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">pinkod_input</span> <span class="o">==</span> <span class="n">pinkod</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="s2">&quot;Correct pin code&quot;</span>
+    <span class="nb">print</span> <span class="s2">&quot;Your balance is &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">1337</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; kr&quot;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="s2">&quot;Wrong pin code&quot;</span>
 </pre></div>
 </div>
 
@@ -380,7 +397,7 @@ saldo = 1337
     <div class="section" id="extra-vilka-jamforelser-finns-det">
 <h4>Extra: Vilka jämförelser finns det?<a class="headerlink" href="#extra-vilka-jamforelser-finns-det" title="Permalink to this headline">¶</a></h4>
 
-    <div data-component="reveal" id="reveal4"   data-showtitle="Visa" data-hidetitle="Göm">
+    <div data-component="reveal" id="diff_comp"   data-showtitle="Visa" data-hidetitle="Göm">
     <div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&gt;</span>    <span class="s2">&quot;större än&quot;</span>     <span class="p">(</span><span class="n">tal</span><span class="p">)</span>
 <span class="o">&lt;</span>    <span class="s2">&quot;mindre än&quot;</span>     <span class="p">(</span><span class="n">tal</span><span class="p">)</span>
 <span class="o">==</span>   <span class="s2">&quot;lika med&quot;</span>      <span class="p">(</span><span class="n">tal</span> <span class="o">&amp;</span> <span class="n">text</span><span class="p">)</span>

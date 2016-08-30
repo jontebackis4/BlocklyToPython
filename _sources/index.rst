@@ -1,5 +1,3 @@
-.. role:: red
-
 ==================
 Jämförelser
 ==================
@@ -60,7 +58,7 @@ Nu ska du testa på att göra en egen jämförelse i Blockly. Din uppgift blir a
 
 * Egentligen så räcker det ju inte med att vara över 18 för att få köra bil, utan Pella behöver ju ha körkort också. Lägg till en variabel som håller koll på om Pella har körkort eller inte och döp den till “ja” eller “nej”. Skriv sedan bara ut att hon får köra bil om hon både är över 18 år **och** har körkort, skriv annars ut att hon inte får köra bil. Tryck på Tips-knappen nedan om du vill ha tips hur du kan göra detta.
 
-.. reveal:: reveal1
+.. reveal:: tips1a
     :showtitle: Visa tips
     :hidetitle: Göm tips
 
@@ -70,13 +68,13 @@ Nu ska du testa på att göra en egen jämförelse i Blockly. Din uppgift blir a
         :alt: nested if statements
         :scale: 100%
 
-    .. reveal:: reveal2
+    .. reveal:: tips1b
         :showtitle: Ett till tips
         :hidetitle: Göm tips
 
         *Döp en ny variabel till körkort som antingen är textbiten "Ja" eller "Nej" och gör en jämförelse om körkort är "Ja".*
 
-.. reveal:: reveal3
+.. reveal:: sol1
     :showtitle: Lösning
     :hidetitle: Göm lösning
 
@@ -120,27 +118,57 @@ men bara **om** användaren skriver in rätt pinkod! Annars ska ett felmeddeland
 
     #skriv din kod här
 
-.. reveal:: reveal4
+.. reveal:: tips2
+    :showtitle: Visa tips
+    :hidetitle: Göm tips
+
+    .. tabbed:: tips2
+
+        .. tab:: input
+
+            Du kan ta *input* från användaren genom ``input()``
+
+        .. tab:: tal --> text
+
+            Pinkoden sparas automatiskt som ett tal. Du behöver göra om pinkoden till en text för att kunna sätta ihop den med text. ``str()`` är en funktion som gör just detta.
+
+        .. tab:: sätta ihop text
+
+            Du sätter ihop strängar m.h.a. ``+``. Ett exempel: ``print "hello" + "world!"`` skriver ut "hello world!"
+
+.. reveal:: sol2
     :showtitle: Lösning
     :hidetitle: Göm lösning
 
+    *Det här är bara ett förslag på lösning, din lösning kan se annorlunda ut och vara rätt ändå.*
+
     ::
-        # pinkod = "0000"
-        # saldo = 1337
-        # pythonkod goes here
-        #
+
+        pinkod = "0000"
+        saldo = 1337
+
+        print "Welcome to the ATM!"
+        pinkod_input = input("Pin Code: ")
+        if pinkod_input == pinkod:
+            print "Correct pin code"
+            print "Your balance is " + str(1337) + " kr"
+        else:
+            print "Wrong pin code"
+
+
+
 
 Extra: Vilka jämförelser finns det?
 -----------------------------------
-.. reveal:: reveal4
+.. reveal:: diff_comp
     :showtitle: Visa
     :hidetitle: Göm
 
     ::
 
-       >    "större än"     (tal)
-       <    "mindre än"     (tal)
-       ==   "lika med"      (tal & text)
-       >=   "större än eller lika med"  (tal)
-       <=   "mindre än eller lika med"  (tal)
-       !=   "skilt från"    (tal&text)
+        >    "större än"     (tal)
+        <    "mindre än"     (tal)
+        ==   "lika med"      (tal & text)
+        >=   "större än eller lika med"  (tal)
+        <=   "mindre än eller lika med"  (tal)
+        !=   "skilt från"    (tal&text)
