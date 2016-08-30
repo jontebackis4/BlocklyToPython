@@ -107,7 +107,7 @@ Din uppgift är att göra en bankomat där användaren kan
 
 + ta ut pengar,
 
-men bara **om** användaren skriver in rätt pinkod! Pinkoden bestäms av dig som gör programmet och ska vara fyra siffror, t.ex. “0000”. Du kan hitta på ett saldo till ditt konto. Skriv programmet i rutan nedanför.
+men bara **om** användaren skriver in rätt pinkod! Annars ska ett felmeddelande skrivas ut. Pinkoden bestäms av dig som gör programmet och ska vara fyra siffror, t.ex. “0000”. Du kan hitta på ett saldo till ditt konto. Skriv programmet i rutan nedanför.
 
 .. activecode:: bankomat
     :nocanvas:
@@ -125,7 +125,6 @@ men bara **om** användaren skriver in rätt pinkod! Pinkoden bestäms av dig so
     :hidetitle: Göm lösning
 
     ::
-
         # pinkod = "0000"
         # saldo = 1337
         # pythonkod goes here
