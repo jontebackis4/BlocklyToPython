@@ -265,7 +265,13 @@
 <li><a class="reference internal" href="#uppgift-far-pella-kora-bil">Uppgift: Får Pella köra bil?</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#jamforelser-i-python">Jämförelser i Python</a></li>
+<li><a class="reference internal" href="#jamforelser-i-python">Jämförelser i Python</a><ul>
+<li><a class="reference internal" href="#uppgift-bankomaten">Uppgift: Bankomaten</a><ul>
+<li><a class="reference internal" href="#extra-vilka-jamforelser-finns-det">Extra: Vilka jämförelser finns det?</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -302,7 +308,7 @@
   
   <div class="section" id="jamforelser">
 <h1>Jämförelser<a class="headerlink" href="#jamforelser" title="Permalink to this headline">¶</a></h1>
-<p>När du programmerar är det väldigt användbart att göra jämförelser på olika saker. Om du programmerar en bankautomat så vill du t.ex. bara att automaten ska ge ut pengar om användaren knappar in rätt pinkod. I detta avsnitt får du lära dig hur du gör sånt här!</p>
+<p>När du programmerar är det väldigt användbart att göra jämförelser på olika saker. Om du programmerar en bankautomat så vill du t.ex. bara att automaten ska ge ut pengar <strong>om</strong> användaren knappar in rätt pinkod. Med andra ord vill du i ditt program kunna jämföra koden som användaren knappar in med den rätta. I detta avsnitt får du lära dig hur du gör jämförelser!</p>
 <div class="section" id="jamforelser-i-blockly">
 <h2>Jämförelser i Blockly<a class="headerlink" href="#jamforelser-i-blockly" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="exempel-far-pella-kora-moppe">
@@ -315,12 +321,16 @@
 <ul class="simple">
 <li>Vi säger att alla som är över 18 år får köra bil. Du ska nu göra ett litet program som har en variabel med Pellas ålder och som antingen skriver ut att hon får köra bil, eller inte, beroende på hennes ålder. Testa först med åldern 16 år och sedan 23 år.</li>
 </ul>
-<iframe class="blk-iframe" seamless src="_static/jamforelser.html" width="600" height="600"></iframe><ul class="simple">
-<li>Egentligen så räcker det ju inte med att vara över 18 för att få köra bil, utan Pella behöver ju ha körkort också. Lägg till en variabel som håller koll på om Pella har körkort eller inte och döp den till “ja” eller “nej” och skriv bara ut att hon får köra bil om hon både är över 18 år <strong>och</strong> har körkort. Tryck på Tips-knappen nedan om du vill ha tips hur du kan göra detta.</li>
+<iframe class="blk-iframe" seamless src="_static/blockly1a.html" width="600" height="600"></iframe><ul class="simple">
+<li>Egentligen så räcker det ju inte med att vara över 18 för att få köra bil, utan Pella behöver ju ha körkort också. Lägg till en variabel som håller koll på om Pella har körkort eller inte och döp den till “ja” eller “nej”. Skriv sedan bara ut att hon får köra bil om hon både är över 18 år <strong>och</strong> har körkort. Tryck på Tips-knappen nedan om du vill ha tips hur du kan göra detta.</li>
 </ul>
 
     <div data-component="reveal" id="reveal1"   data-showtitle="Visa tips" data-hidetitle="Göm tips">
-    <em>Det går att ha if-satser inuti if-satser.</em>
+    <p><em>Det går att ha if-satser inuti if-satser, om man behöver göra flera jämförelser.</em></p>
+<div class="figure">
+<a class="reference internal image-reference" href="_images/if-if.png"><img alt="nested if statements" src="_images/if-if.png" style="width: 207.0px; height: 130.0px;" /></a>
+</div>
+
     </div>
     <p>Bra jobbat! Nu är vi redo att se hur vi gör jämförelser i Python.</p>
 </div>
@@ -328,7 +338,42 @@
 <div class="section" id="jamforelser-i-python">
 <h2>Jämförelser i Python<a class="headerlink" href="#jamforelser-i-python" title="Permalink to this headline">¶</a></h2>
 <p><em>I den här videon förklarar vi hur du skriver en if-sats i Python-kod.</em></p>
-<iframe src="http://www.youtube.com/embed/D9gG74yMUec"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-left" seamless ></iframe></div>
+<iframe src="http://www.youtube.com/embed/D9gG74yMUec"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-left" seamless ></iframe><div class="section" id="uppgift-bankomaten">
+<h3>Uppgift: Bankomaten<a class="headerlink" href="#uppgift-bankomaten" title="Permalink to this headline">¶</a></h3>
+<p>Nu är det dags att programmera en bankomat i Pythonkod!</p>
+<p>Din uppgift är att göra en bankomat där användaren kan</p>
+<ul class="simple">
+<li>få reda på saldot och</li>
+<li>ta ut pengar,</li>
+</ul>
+<p>men bara <strong>om</strong> användaren skriver in rätt pinkod! Pinkoden bestäms av dig som gör programmet och ska vara fyra siffror, t.ex. “0000”. Du kan hitta på ett saldo till ditt konto. Skriv programmet i rutan nedanför.</p>
+
+<div class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=bankomat data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='Uppgift: Bankomaten'>
+pinkod = "0000"
+saldo = 1337
+
+#skriv din kod här
+</textarea>
+</div>
+<div class="section" id="extra-vilka-jamforelser-finns-det">
+<h4>Extra: Vilka jämförelser finns det?<a class="headerlink" href="#extra-vilka-jamforelser-finns-det" title="Permalink to this headline">¶</a></h4>
+
+    <div data-component="reveal" id="reveal2"   data-showtitle="Visa" data-hidetitle="Göm">
+    <div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&gt;</span>    <span class="s2">&quot;större än&quot;</span>     <span class="p">(</span><span class="n">tal</span><span class="p">)</span>
+<span class="o">&lt;</span>    <span class="s2">&quot;mindre än&quot;</span>     <span class="p">(</span><span class="n">tal</span><span class="p">)</span>
+<span class="o">==</span>   <span class="s2">&quot;lika med&quot;</span>      <span class="p">(</span><span class="n">tal</span> <span class="o">&amp;</span> <span class="n">text</span><span class="p">)</span>
+<span class="o">&gt;=</span>   <span class="s2">&quot;större än eller lika med&quot;</span>  <span class="p">(</span><span class="n">tal</span><span class="p">)</span>
+<span class="o">&lt;=</span>   <span class="s2">&quot;mindre än eller lika med&quot;</span>  <span class="p">(</span><span class="n">tal</span><span class="p">)</span>
+<span class="o">!=</span>   <span class="s2">&quot;skilt från&quot;</span>    <span class="p">(</span><span class="n">tal</span><span class="o">&amp;</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+
+    </div>
+    </div>
+</div>
+</div>
 </div>
 
 
