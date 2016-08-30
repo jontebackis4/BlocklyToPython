@@ -4,16 +4,16 @@
 Jämförelser
 ==================
 
-När du programmerar är det väldigt användbart att göra jämförelser på olika saker. Om du programmerar en bankautomat så vill du t.ex. bara att automaten ska ge ut pengar **om** användaren knappar in rätt pinkod. Med andra ord vill du i ditt program kunna jämföra koden som användaren knappar in med den rätta. I detta avsnitt får du lära dig hur du gör jämförelser!
+När du programmerar är det väldigt användbart att göra jämförelser mellan olika saker. Om du programmerar en bankautomat så vill du t.ex. bara att automaten ska ge ut pengar **om** användaren knappar in rätt pinkod, **annars** ska den få ett meddelande om fel pinkod. I detta avsnitt får du lära dig hur du gör jämförelser på detta sätt!
 
-Jämförelser i Blockly
-::::::::::::::::::::::
+Om/annars i Blockly
+:::::::::::::::::::::::::::::::::
 
 Exempel: Får Pella köra moppe?
 ******************************
-*I den här videon förklarar vi vad en så kallad if-sats är och hur du skriver en i Blockly.*
+*I den här videon förklarar vi hur du gör jämförelser med om/annars i Blockly*
 
-.. youtube:: Tdqa0uMoiis
+.. youtube:: eQf5W6Ww_9U
     :height: 315
     :width: 560
     :align: left
@@ -58,25 +58,39 @@ Nu ska du testa på att göra en egen jämförelse i Blockly. Din uppgift blir a
     </xml>
 
 
-* Egentligen så räcker det ju inte med att vara över 18 för att få köra bil, utan Pella behöver ju ha körkort också. Lägg till en variabel som håller koll på om Pella har körkort eller inte och döp den till “ja” eller “nej”. Skriv sedan bara ut att hon får köra bil om hon både är över 18 år **och** har körkort. Tryck på Tips-knappen nedan om du vill ha tips hur du kan göra detta.
+* Egentligen så räcker det ju inte med att vara över 18 för att få köra bil, utan Pella behöver ju ha körkort också. Lägg till en variabel som håller koll på om Pella har körkort eller inte och döp den till “ja” eller “nej”. Skriv sedan bara ut att hon får köra bil om hon både är över 18 år **och** har körkort, skriv annars ut att hon inte får köra bil. Tryck på Tips-knappen nedan om du vill ha tips hur du kan göra detta.
 
 .. reveal:: reveal1
     :showtitle: Visa tips
     :hidetitle: Göm tips
 
-    *Det går att ha if-satser inuti if-satser, om man behöver göra flera jämförelser.*
+    * *Det går att ha if-satser inuti if-satser, om man behöver göra flera jämförelser.*
 
     .. figure:: ../_static/if-if.png
         :alt: nested if statements
         :scale: 100%
 
+    .. reveal:: reveal2
+        :showtitle: Ett till tips
+        :hidetitle: Göm tips
+
+        *Döp en ny variabel till körkort som antingen är textbiten "Ja" eller "Nej" och gör en jämförelse om körkort är "Ja".*
+
+.. reveal:: reveal3
+    :showtitle: Lösning
+    :hidetitle: Göm lösning
+
+    .. figure:: ../_static/uppgift1.png
+        :alt: solution1
+        :scale: 100%
+
 
 Bra jobbat! Nu är vi redo att se hur vi gör jämförelser i Python.
 
-Jämförelser i Python
+Om/annars i Python
 ::::::::::::::::::::
 
-*I den här videon förklarar vi hur du skriver en if-sats i Python-kod.*
+*I den här videon förklarar vi hur du gör jämförelser med om/annars i Python-kod.*
 
 .. youtube:: D9gG74yMUec
     :height: 315
@@ -98,7 +112,7 @@ men bara **om** användaren skriver in rätt pinkod! Pinkoden bestäms av dig so
 .. activecode:: bankomat
     :nocanvas:
     :nocodelens:
-    :caption: Uppgift: Bankomaten
+    :caption: Bankomaten (ta bort caption, hur?)
     :language: python
 
     pinkod = "0000"
@@ -106,10 +120,20 @@ men bara **om** användaren skriver in rätt pinkod! Pinkoden bestäms av dig so
 
     #skriv din kod här
 
+.. reveal:: reveal4
+    :showtitle: Lösning
+    :hidetitle: Göm lösning
+
+    ::
+
+        # pinkod = "0000"
+        # saldo = 1337
+        # pythonkod goes here
+        #
 
 Extra: Vilka jämförelser finns det?
-----------------------------
-.. reveal:: reveal2
+-----------------------------------
+.. reveal:: reveal4
     :showtitle: Visa
     :hidetitle: Göm
 
