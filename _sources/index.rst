@@ -4,7 +4,7 @@
 Jämförelser
 ==================
 
-När du programmerar är det väldigt användbart att göra jämförelser på olika saker. Om du programmerar en bankautomat så vill du t.ex. bara att automaten ska ge ut pengar om användaren knappar in rätt pinkod. I detta avsnitt får du lära dig hur du gör sånt här!
+När du programmerar är det väldigt användbart att göra jämförelser på olika saker. Om du programmerar en bankautomat så vill du t.ex. bara att automaten ska ge ut pengar **om** användaren knappar in rätt pinkod. Med andra ord vill du i ditt program kunna jämföra koden som användaren knappar in med den rätta. I detta avsnitt får du lära dig hur du gör jämförelser!
 
 Jämförelser i Blockly
 ::::::::::::::::::::::
@@ -83,14 +83,41 @@ Jämförelser i Python
     :width: 560
     :align: left
 
-"Lathund" -- Vad för jämförelser finns det?
-*******************************************
+Uppgift: Bankomaten
+******************************
+Nu är det dags att programmera en bankomat i Pythonkod!
 
-::
+Din uppgift är att göra en bankomat där användaren kan
 
-   >    "större än"
-   <    "mindre än"
-   ==   "lika med"
-   >=   "större än eller lika med"
-   <=   "mindre än eller lika med"
-   !=   "skilt från"
++ få reda på saldot och
+
++ ta ut pengar,
+
+men bara **om** användaren skriver in rätt pinkod! Pinkoden bestäms av dig som gör programmet och ska vara fyra siffror, t.ex. “0000”. Du kan hitta på ett saldo till ditt konto. Skriv programmet i rutan nedanför.
+
+.. activecode:: bankomat
+    :nocanvas:
+    :nocodelens:
+    :caption: Uppgift: Bankomaten
+    :language: python
+
+    pinkod = "0000"
+    saldo = 1337
+
+    #skriv din kod här
+
+
+Extra: Vilka jämförelser finns det?
+----------------------------
+.. reveal:: reveal2
+    :showtitle: Visa
+    :hidetitle: Göm
+
+    ::
+
+       >    "större än"     (tal)
+       <    "mindre än"     (tal)
+       ==   "lika med"      (tal & text)
+       >=   "större än eller lika med"  (tal)
+       <=   "mindre än eller lika med"  (tal)
+       !=   "skilt från"    (tal&text)
