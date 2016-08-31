@@ -90,7 +90,7 @@ Om/annars i Python
 
 *I den här videon förklarar vi hur du gör jämförelser med om/annars i Python-kod.*
 
-.. youtube:: D9gG74yMUec
+.. youtube:: FNfiNw1ELFM
     :height: 315
     :width: 560
     :align: left
