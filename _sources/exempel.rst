@@ -1,0 +1,174 @@
+==================
+Jämförelser
+==================
+
+När du programmerar är det väldigt användbart att göra jämförelser mellan olika saker. Om du programmerar en bankautomat så vill du t.ex. bara att automaten ska ge ut pengar **om** användaren knappar in rätt pinkod, **annars** ska den få ett meddelande om fel pinkod. I detta avsnitt får du lära dig hur du gör jämförelser på detta sätt!
+
+Om/annars i Blockly
+:::::::::::::::::::::::::::::::::
+
+Exempel video: Får Pella köra moppe?
+******************************
+*I den här videon förklarar vi hur du gör jämförelser med om/annars i Blockly*
+
+.. youtube:: eQf5W6Ww_9U
+    :height: 315
+    :width: 560
+    :align: left
+
+Exempel aktiv kod: Får Pella köra bil?
+****************************
+
+Nu ska du testa på att göra en egen jämförelse i Blockly. Din uppgift blir att skriva ut om Pella får köra bil eller inte.
+
+* Vi säger att alla som är över 18 år får köra bil. Du ska nu göra ett litet program som har en variabel med Pellas ålder och som antingen skriver ut att hon får köra bil, eller inte, beroende på hennes ålder. Testa först med åldern 16 år och sedan 23 år.
+
+.. blockly:: blockly1a
+
+    * controls
+    controls_if
+    controls_repeat_ext
+    controls_for
+    ====
+    * logic
+    logic_compare
+    ====
+    * math
+    math_number
+    math_arithmetic
+    ====
+    * text
+    text
+    text_print
+    ====
+    variables
+
+    preload::
+    <xml>
+       <block type="variables_set" id="1" inline="true" x="25" y="9">
+          <field name="VAR">age</field>
+          <value name="VALUE">
+             <block type="math_number" id="2">
+                <field name="NUM">16</field>
+             </block>
+          </value>
+       </block>
+    </xml>
+
+
+* Egentligen så räcker det ju inte med att vara över 18 för att få köra bil, utan Pella behöver ju ha körkort också. Lägg till en variabel som håller koll på om Pella har körkort eller inte och sätt den till “ja” eller “nej”. Skriv sedan bara ut att hon får köra bil om hon både är över 18 år **och** har körkort, skriv annars ut att hon inte får köra bil. Tryck på Tips-knappen nedan om du vill ha tips hur du kan göra detta.
+
+.. reveal:: tips1a
+    :showtitle: Visa tips
+    :hidetitle: Göm tips
+
+    * *Det går att ha if-satser inuti if-satser, om man behöver göra flera jämförelser.*
+
+    .. figure:: ../_static/if-if.png
+        :alt: nested if statements
+        :scale: 100%
+
+    .. reveal:: tips1b
+        :showtitle: Ett till tips
+        :hidetitle: Göm tips
+
+        *Döp en ny variabel till körkort som antingen är textbiten "Ja" eller "Nej" och gör en jämförelse om körkort är "Ja".*
+
+.. reveal:: sol1
+    :showtitle: Lösning
+    :hidetitle: Göm lösning
+
+    .. figure:: ../_static/uppgift1.png
+        :alt: solution1
+        :scale: 100%
+
+
+Bra jobbat! Nu är vi redo att se hur vi gör jämförelser i Python.
+
+Om/annars i Python
+::::::::::::::::::::
+
+*I den här videon förklarar vi hur du gör jämförelser med om/annars i Python-kod.*
+
+.. youtube:: FNfiNw1ELFM
+    :height: 315
+    :width: 560
+    :align: left
+
+Exempel aktiv kod: Bankomaten
+******************************
+Nu är det dags att programmera en bankomat i Pythonkod!
+
+Din uppgift är att göra en bankomat där användaren kan
+
++ få reda på saldot och
+
++ ta ut pengar,
+
+men bara **om** användaren skriver in rätt pinkod! Annars ska ett felmeddelande skrivas ut. Pinkoden bestäms av dig som gör programmet och ska vara fyra siffror, t.ex. “0000”. Du kan hitta på ett saldo till ditt konto. Skriv programmet i rutan nedanför.
+
+.. activecode:: bankomat
+    :nocanvas:
+    :nocodelens:
+    :caption: Bankomaten (ta bort caption, hur?)
+    :language: python
+
+    pinkod = "0000"
+    saldo = 1337
+
+    #skriv din kod här
+
+.. reveal:: tips2
+    :showtitle: Visa tips
+    :hidetitle: Göm tips
+
+    .. tabbed:: tips2
+
+        .. tab:: input
+
+            Du kan ta *input* från användaren genom ``input()``
+
+        .. tab:: tal --> text
+
+            Pinkoden sparas automatiskt som ett tal. Du behöver göra om pinkoden till en text för att kunna sätta ihop den med text. ``str()`` är en funktion som gör just detta.
+
+        .. tab:: sätta ihop text
+
+            Du sätter ihop strängar m.h.a. ``+``. Ett exempel: ``print "hello" + "world!"`` skriver ut "hello world!"
+
+.. reveal:: sol2
+    :showtitle: Lösning
+    :hidetitle: Göm lösning
+
+    *Det här är bara ett förslag på lösning, din lösning kan se annorlunda ut och vara rätt ändå.*
+
+    ::
+
+        pinkod = "0000"
+        saldo = 1337
+
+        print "Welcome to the ATM!"
+        pinkod_input = input("Pin Code: ")
+        if pinkod_input == pinkod:
+            print "Correct pin code"
+            print "Your balance is " + str(1337) + " kr"
+        else:
+            print "Wrong pin code"
+
+
+
+
+Extra: Vilka jämförelser finns det?
+-----------------------------------
+.. reveal:: diff_comp
+    :showtitle: Visa
+    :hidetitle: Göm
+
+    ::
+
+        >    "större än"     (tal)
+        <    "mindre än"     (tal)
+        ==   "lika med"      (tal & text)
+        >=   "större än eller lika med"  (tal)
+        <=   "mindre än eller lika med"  (tal)
+        !=   "skilt från"    (tal&text)

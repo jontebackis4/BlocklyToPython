@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 
@@ -6,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Index &mdash; Runestone Interactive Overview</title>
+    <title>Jämförelser &mdash; Runestone Interactive Overview</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -102,6 +101,7 @@
     <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
     <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="top" title="Runestone Interactive Overview" href="index.html" />
+    <link rel="prev" title="Välkommen!" href="index.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -246,7 +246,7 @@
             <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
             <li class="divider"></li>
             <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
-            <li><a href='/runestone/default/reportabug?course=blockly2pythondemo&page=genindex'>Report A Problem</a></li>
+            <li><a href='/runestone/default/reportabug?course=blockly2pythondemo&page=exempel'>Report A Problem</a></li>
           </ul>
         </li>
         <!-- end help menu dropdown -->
@@ -260,14 +260,37 @@
         <!--
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
-  <ul class="dropdown-menu localtoc"></ul>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Jämförelser</a><ul>
+<li><a class="reference internal" href="#om-annars-i-blockly">Om/annars i Blockly</a><ul>
+<li><a class="reference internal" href="#exempel-video-far-pella-kora-moppe">Exempel video: Får Pella köra moppe?</a></li>
+<li><a class="reference internal" href="#exempel-aktiv-kod-far-pella-kora-bil">Exempel aktiv kod: Får Pella köra bil?</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#om-annars-i-python">Om/annars i Python</a><ul>
+<li><a class="reference internal" href="#exempel-aktiv-kod-bankomaten">Exempel aktiv kod: Bankomaten</a><ul>
+<li><a class="reference internal" href="#extra-vilka-jamforelser-finns-det">Extra: Vilka jämförelser finns det?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
 </li>
           <li class="divider-vertical"></li>
         
         
-
-   
           
+  <li id="relations-prev" title="Previous Chapter - Välkommen!" data-toggle="tooltip">
+    <a href="index.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+    <li class="divider-vertical"></li>
+  
 
 <script type="text/javascript">
   opts = {'placement':'bottom',
@@ -278,8 +301,7 @@
   $('#relations-prev').tooltip(opts);
   $('#relations-next').tooltip(opts);
 </script>
-        
--->
+        -->
         
           <li></li>
         
@@ -294,16 +316,123 @@
 
 <div class="container" id="main-content">
   
+  <div class="section" id="jamforelser">
+<h1>Jämförelser<a class="headerlink" href="#jamforelser" title="Permalink to this headline">¶</a></h1>
+<p>När du programmerar är det väldigt användbart att göra jämförelser mellan olika saker. Om du programmerar en bankautomat så vill du t.ex. bara att automaten ska ge ut pengar <strong>om</strong> användaren knappar in rätt pinkod, <strong>annars</strong> ska den få ett meddelande om fel pinkod. I detta avsnitt får du lära dig hur du gör jämförelser på detta sätt!</p>
+<div class="section" id="om-annars-i-blockly">
+<h2>Om/annars i Blockly<a class="headerlink" href="#om-annars-i-blockly" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="exempel-video-far-pella-kora-moppe">
+<h3>Exempel video: Får Pella köra moppe?<a class="headerlink" href="#exempel-video-far-pella-kora-moppe" title="Permalink to this headline">¶</a></h3>
+<p><em>I den här videon förklarar vi hur du gör jämförelser med om/annars i Blockly</em></p>
+<iframe src="http://www.youtube.com/embed/eQf5W6Ww_9U"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-left" seamless ></iframe></div>
+<div class="section" id="exempel-aktiv-kod-far-pella-kora-bil">
+<h3>Exempel aktiv kod: Får Pella köra bil?<a class="headerlink" href="#exempel-aktiv-kod-far-pella-kora-bil" title="Permalink to this headline">¶</a></h3>
+<p>Nu ska du testa på att göra en egen jämförelse i Blockly. Din uppgift blir att skriva ut om Pella får köra bil eller inte.</p>
+<ul class="simple">
+<li>Vi säger att alla som är över 18 år får köra bil. Du ska nu göra ett litet program som har en variabel med Pellas ålder och som antingen skriver ut att hon får köra bil, eller inte, beroende på hennes ålder. Testa först med åldern 16 år och sedan 23 år.</li>
+</ul>
+<iframe class="blk-iframe" seamless src="_static\blockly1a.html" width="600" height="600"></iframe><ul class="simple">
+<li>Egentligen så räcker det ju inte med att vara över 18 för att få köra bil, utan Pella behöver ju ha körkort också. Lägg till en variabel som håller koll på om Pella har körkort eller inte och sätt den till “ja” eller “nej”. Skriv sedan bara ut att hon får köra bil om hon både är över 18 år <strong>och</strong> har körkort, skriv annars ut att hon inte får köra bil. Tryck på Tips-knappen nedan om du vill ha tips hur du kan göra detta.</li>
+</ul>
 
-<h1 id="index">Index</h1>
+    <div data-component="reveal" id="tips1a"   data-showtitle="Visa tips" data-hidetitle="Göm tips">
+    <ul class="simple">
+<li><em>Det går att ha if-satser inuti if-satser, om man behöver göra flera jämförelser.</em></li>
+</ul>
+<div class="figure">
+<a class="reference internal image-reference" href="_images/if-if.png"><img alt="nested if statements" src="_images/if-if.png" style="width: 207.0px; height: 130.0px;" /></a>
+</div>
 
-<div class="genindex-jumpbox">
- 
+    <div data-component="reveal" id="tips1b"   data-showtitle="Ett till tips" data-hidetitle="Göm tips">
+    <em>Döp en ny variabel till körkort som antingen är textbiten &#8220;Ja&#8221; eller &#8220;Nej&#8221; och gör en jämförelse om körkort är &#8220;Ja&#8221;.</em>
+    </div>
+    
+    </div>
+    
+    <div data-component="reveal" id="sol1"   data-showtitle="Lösning" data-hidetitle="Göm lösning">
+    <div class="figure">
+<a class="reference internal image-reference" href="_images/uppgift1.png"><img alt="solution1" src="_images/uppgift1.png" style="width: 378.0px; height: 293.0px;" /></a>
+</div>
+
+    </div>
+    <p>Bra jobbat! Nu är vi redo att se hur vi gör jämförelser i Python.</p>
+</div>
+</div>
+<div class="section" id="om-annars-i-python">
+<h2>Om/annars i Python<a class="headerlink" href="#om-annars-i-python" title="Permalink to this headline">¶</a></h2>
+<p><em>I den här videon förklarar vi hur du gör jämförelser med om/annars i Python-kod.</em></p>
+<iframe src="http://www.youtube.com/embed/FNfiNw1ELFM"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-left" seamless ></iframe><div class="section" id="exempel-aktiv-kod-bankomaten">
+<h3>Exempel aktiv kod: Bankomaten<a class="headerlink" href="#exempel-aktiv-kod-bankomaten" title="Permalink to this headline">¶</a></h3>
+<p>Nu är det dags att programmera en bankomat i Pythonkod!</p>
+<p>Din uppgift är att göra en bankomat där användaren kan</p>
+<ul class="simple">
+<li>få reda på saldot och</li>
+<li>ta ut pengar,</li>
+</ul>
+<p>men bara <strong>om</strong> användaren skriver in rätt pinkod! Annars ska ett felmeddelande skrivas ut. Pinkoden bestäms av dig som gör programmet och ska vara fyra siffror, t.ex. “0000”. Du kan hitta på ett saldo till ditt konto. Skriv programmet i rutan nedanför.</p>
+
+<textarea data-component="activecode" id=bankomat data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='Bankomaten (ta bort caption, hur?)'>
+pinkod = "0000"
+saldo = 1337
+
+#skriv din kod här
+</textarea>
+
+    <div data-component="reveal" id="tips2"   data-showtitle="Visa tips" data-hidetitle="Göm tips">
+    <div id='tips2' data-component="tabbedStuff" ><div data-component="tab" data-tabname="input" >
+Du kan ta <em>input</em> från användaren genom <code class="docutils literal"><span class="pre">input()</span></code></div><div data-component="tab" data-tabname="tal --> text" >
+Pinkoden sparas automatiskt som ett tal. Du behöver göra om pinkoden till en text för att kunna sätta ihop den med text. <code class="docutils literal"><span class="pre">str()</span></code> är en funktion som gör just detta.</div><div data-component="tab" data-tabname="sätta ihop text" >
+Du sätter ihop strängar m.h.a. <code class="docutils literal"><span class="pre">+</span></code>. Ett exempel: <code class="docutils literal"><span class="pre">print</span> <span class="pre">&quot;hello&quot;</span> <span class="pre">+</span> <span class="pre">&quot;world!&quot;</span></code> skriver ut &#8220;hello world!&#8221;</div>
+    </div>
+
+
+    </div>
+    
+    <div data-component="reveal" id="sol2"   data-showtitle="Lösning" data-hidetitle="Göm lösning">
+    <p><em>Det här är bara ett förslag på lösning, din lösning kan se annorlunda ut och vara rätt ändå.</em></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pinkod</span> <span class="o">=</span> <span class="s2">&quot;0000&quot;</span>
+<span class="n">saldo</span> <span class="o">=</span> <span class="mi">1337</span>
+
+<span class="nb">print</span> <span class="s2">&quot;Welcome to the ATM!&quot;</span>
+<span class="n">pinkod_input</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Pin Code: &quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">pinkod_input</span> <span class="o">==</span> <span class="n">pinkod</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="s2">&quot;Correct pin code&quot;</span>
+    <span class="nb">print</span> <span class="s2">&quot;Your balance is &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">1337</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; kr&quot;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="s2">&quot;Wrong pin code&quot;</span>
+</pre></div>
+</div>
+
+    </div>
+    <div class="section" id="extra-vilka-jamforelser-finns-det">
+<h4>Extra: Vilka jämförelser finns det?<a class="headerlink" href="#extra-vilka-jamforelser-finns-det" title="Permalink to this headline">¶</a></h4>
+
+    <div data-component="reveal" id="diff_comp"   data-showtitle="Visa" data-hidetitle="Göm">
+    <div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&gt;</span>    <span class="s2">&quot;större än&quot;</span>     <span class="p">(</span><span class="n">tal</span><span class="p">)</span>
+<span class="o">&lt;</span>    <span class="s2">&quot;mindre än&quot;</span>     <span class="p">(</span><span class="n">tal</span><span class="p">)</span>
+<span class="o">==</span>   <span class="s2">&quot;lika med&quot;</span>      <span class="p">(</span><span class="n">tal</span> <span class="o">&amp;</span> <span class="n">text</span><span class="p">)</span>
+<span class="o">&gt;=</span>   <span class="s2">&quot;större än eller lika med&quot;</span>  <span class="p">(</span><span class="n">tal</span><span class="p">)</span>
+<span class="o">&lt;=</span>   <span class="s2">&quot;mindre än eller lika med&quot;</span>  <span class="p">(</span><span class="n">tal</span><span class="p">)</span>
+<span class="o">!=</span>   <span class="s2">&quot;skilt från&quot;</span>    <span class="p">(</span><span class="n">tal</span><span class="o">&amp;</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+
+    </div>
+    </div>
+</div>
+</div>
 </div>
 
 
   
       
+  <li id="relations-prev" class="navLink" title='Previous Section - Välkommen!' data-toggle="tooltip">
+    <a href="index.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="index.html" ></a>
+  
 
 <script type="text/javascript">
 
